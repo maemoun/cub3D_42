@@ -15,12 +15,20 @@
 static int	ft_len_sep(const char *s, char c)
 {
 	int	i;
+	// int j;
 
 	i = 0;
 	while (s[i] && s[i] != c)
 	{
 		i++;
 	}
+	// j = 0;
+	// while (s[j] == c && s[j + 1] == c)
+	// {
+	// 	j++;
+	// 	i++;
+	// }
+	// printf("len_sep = %d\n", i);
 	return (i);
 }
 
@@ -39,7 +47,11 @@ static int	ft_nwords(const char *s, char c)
 			w++;
 		while (s[i] && s[i] != c)
 			i++;
+		// if (s[i] == c)
+		// 	w++;
+		// i++;
 	}
+	// w++;
 	return (w);
 }
 
@@ -87,6 +99,7 @@ char	**ft_split(char *s, char c)
 	if (!s)
 		return (NULL);
 	n_words = ft_nwords(s, c);
+	// printf("n_words = %d\n", n_words);
 	arr = malloc((n_words + 1) * sizeof(char *));
 	if (!arr)
 		return (NULL);

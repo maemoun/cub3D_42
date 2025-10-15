@@ -127,11 +127,19 @@ void	ft_init_map(t_data *dt)
 	max = 0;
 	while (dt->fd_lines[j])
 	{
+		if (dt->fd_lines[j][0] == '\0')
+			ft_print_error("Error\nMap not found!\n", NULL, NULL);
 		if (ft_strlen(dt->fd_lines[j]) > max)
 			max = ft_strlen(dt->fd_lines[j]);
 		dt->map_height++;
 		j++;
 	}
+	// i = 0;
+	// while (dt->fd_lines[i])
+	// {
+	// 	printf("%s\n", dt->fd_lines[i]);
+	// 	i++;
+	// }
 	dt->map_width = max;
 	dt->map = malloc(sizeof(char *) * (dt->map_height + 1));
 	if (!dt->map)
@@ -148,12 +156,12 @@ void	ft_init_map(t_data *dt)
 		j++;
 	}
 	dt->map[j] = NULL;
-	i = 0;
-	while (dt->map[i])
-	{
-		printf("|%s|\n", dt->map[i]);
-		i++;
-	}
+	// i = 0;
+	// while (dt->map[i])
+	// {
+	// 	printf("%s\n", dt->map[i]);
+	// 	i++;
+	// }
 }
 
 void	ft_init_fd(t_data *dt)

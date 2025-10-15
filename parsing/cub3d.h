@@ -71,6 +71,7 @@ void	ft_init_color(t_data *dt);
 void	ft_check_fd(t_data *dt);
 char	*ft_get_texture(char *s);
 char	*ft_get_color(char *s);
+void	ft_check_map_errors(t_data *dt);
 
 //------------//utils :
 char	*ft_strtrim(char *s1, char *set);

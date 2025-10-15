@@ -18,7 +18,7 @@ void    ft_parsing(char *fd_in, t_data *dt)
 	ft_check_file_name(fd_in);
 	ft_read_fd(fd_in, dt);
     ft_init_fd(dt);
-	// ft_check_map_errors(&list);
+	ft_check_map_errors(dt);
     // if (!dt->fd_lines)
     //     ft_print_error("Error\nMap reading failed!\n", NULL, NULL);
     // while (dt->fd_lines[i])

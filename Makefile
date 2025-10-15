@@ -16,6 +16,7 @@ SRC		:= cub3d.c \
 			./parsing/utils/ft_strtrim.c \
 			./parsing/utils/ft_memset.c \
 			./parsing/utils/ft_memcpy.c \
+			./parsing/check_map_errors.c \
 
 
 OBJ		:= $(SRC:.c=.o)

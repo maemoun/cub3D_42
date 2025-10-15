@@ -34,6 +34,12 @@ void	ft_read_fd(char *fd_in, t_data *dt)
 		line = get_next_line(fd);
 	}
 	dt->fd_lines = ft_split(line_join, '\n');
+	int i = 0;
+	while (dt->fd_lines[i])
+	{
+		printf("%s\n", dt->fd_lines[i]);
+		i++;
+	}
 	free(line_join);
 	free(line);
 	close(fd);
